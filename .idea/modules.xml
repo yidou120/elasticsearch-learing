@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/es-java/es-java.iml" filepath="$PROJECT_DIR$/es-java/es-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-es/spring-boot-es.iml" filepath="$PROJECT_DIR$/spring-boot-es/spring-boot-es.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-data-es/spring-data-es.iml" filepath="$PROJECT_DIR$/spring-data-es/spring-data-es.iml" />
+    </modules>
+  </component>
+</project>

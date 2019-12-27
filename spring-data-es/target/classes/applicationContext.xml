@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:elasticsearch="http://www.springframework.org/schema/data/elasticsearch"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.springframework.org/schema/data/elasticsearch
+       https://www.springframework.org/schema/data/elasticsearch/spring-elasticsearch-1.0.xsd">
+	<!--扫描repository下的接口-->
+	<elasticsearch:repositories base-package="com.edou.es.repository"/>
+	<!--<context:annotation-config></context:annotation-config>-->
+	<!--扫描service-->
+	<!--<context:component-scan base-package="cn.edou.es.service">
+	</context:component-scan>-->
+	<!--配置es 的连接-->
+	<elasticsearch:transport-client id="esClient" cluster-name="my-elasticsearch" cluster-nodes="127.0.0.1:9301,127.0.0.1:9302,127.0.0.1:9303"/>
+	<!--配置es模板-->
+	<bean id="esTemplate" class="org.springframework.data.elasticsearch.core.ElasticsearchTemplate">
+		<constructor-arg name="client" ref="esClient"></constructor-arg>
+	</bean>
+	
+</beans>

@@ -1,0 +1,9 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-name: my-elasticsearch
+      cluster-nodes: 127.0.0.1:9301,127.0.0.1:9302,127.0.0.1:9303
+  application:
+    name: spring-boot-es
+server:
+  port: 8000
